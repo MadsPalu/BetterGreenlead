@@ -272,7 +272,7 @@ ul {
   line-height: 30px;
 }
 
-.furtherInfoHeading {
+.testimonialHeading {
   display: flex;
   color: #61812c;
   flex-direction: column;
@@ -584,7 +584,7 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-.sectionGrid .sectionGridItem {
+.sectionGrid .bulletPoint {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -598,6 +598,33 @@ header {
 .furtherInfoBox a {
   text-decoration: none;
   padding-top: 0.9rem;
+}
+
+.mainFlex {
+  display: flex;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+.multimediaDesktop {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 780px;
+  padding: 24px;
+  padding-top: 0%;
+}
+
+hr {
+  width: 60%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  fill: rgba(255, 255, 255, 0.5);
+  -webkit-margin-start: 0%;
+          margin-inline-start: 0%;
+}
+
+.longHr {
+  width: 100%;
 }
 
 /*common elements end*/
@@ -674,14 +701,12 @@ header {
   padding-bottom: 10rem;
 }
 
-/*services end*/
-/*workshop start*/
-.workshopFlex {
-  display: flex;
+.hrMobile {
   width: 100%;
-  margin-bottom: 5rem;
 }
 
+/*services end*/
+/*workshop start*/
 .quote {
   width: 70%;
   margin-right: auto;
@@ -726,18 +751,9 @@ span {
   color: #61812c;
 }
 
-.testimonialSectionDesktop {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  max-width: 780px;
-  padding: 24px;
-  padding-top: 0%;
-}
-
 /*workshop end*/
 /*about us start*/
-.previosProjectsTextFlex {
+.previosProjectsFlex {
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
@@ -748,32 +764,10 @@ span {
   display: inline-block;
 }
 
-.whatWeDid {
-  margin-top: -1rem;
-}
-
-hr {
-  width: 60%;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  fill: rgba(255, 255, 255, 0.5);
-  -webkit-margin-start: 0%;
-          margin-inline-start: 0%;
-}
-
-.longHr {
-  width: 100%;
-}
-
 /*about us end*/
-/*services  start*/
-.hrMobile {
-  width: 100%;
-}
-
-/*services  end*/
 /*about us mediqquerries start*/
 @media only screen and (min-width: 1024px) {
-  .testimonialSectionMobile,
+  .testimonialMobile,
 details,
 summary,
 .navbar {
@@ -811,7 +805,7 @@ summary,
     margin: 0%;
     width: 100%;
   }
-  .workshopFlex {
+  .mainFlex {
     display: block;
   }
   .quote {
@@ -829,15 +823,15 @@ summary,
     font-size: 40px;
     line-height: 46px;
   }
-  .testimonialSectionDesktop {
+  .multimediaDesktop {
     display: none;
   }
-  .testimonialSectionMobile {
+  .testimonialMobile {
     display: flex;
     flex-direction: column;
     text-align: center;
   }
-  .testimonialSectionMobile video {
+  .testimonialMobile video {
     width: 100%;
   }
   .sectionGrid {
@@ -847,7 +841,7 @@ summary,
   }
   /*about us mediqquerries end*/
   /*about us mediaquerries start*/
-  .previosProjectsTextFlex {
+  .previosProjectsFlex {
     display: block;
   }
   .gain {
@@ -925,7 +919,7 @@ summary,
   }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1600px) {
-  .testimonialSectionDesktop {
+  .testimonialDesktop {
     width: 50%;
     margin-top: -4rem;
     height: -webkit-min-content;
