@@ -87,6 +87,28 @@ h4 {
     margin-top: 0.5rem;
   }
 }
+.emailBtn {
+  width: 154px;
+  height: 49px;
+  background-color: $darkGreen;
+  @include textBox($white, none, 20px, $fontStack, $fontBold, 24px);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.gridNumber {
+  @include textBox($lightGreen, row, 40px, $fontStack, $fontBold, 49px);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+.gridText {
+  @include textBox($white, row, 30px, $fontStack, $fontNormal, 36px);
+  margin-top: -2rem;
+  justify-content: center;
+}
+/*Services fonts start*/
 .anchorNumber {
   @include textBox($wTonedDown, row, 40px, $fontStack, $fontBold, 50px);
   margin-bottom: 2rem;
@@ -101,16 +123,6 @@ h4 {
 }
 .furtherInfoText {
   @include textBox($darkGreen, column, 15px, $fontStack, $fontNormal, 18px);
-}
-
-.emailBtn {
-  width: 154px;
-  height: 49px;
-  background-color: $darkGreen;
-  @include textBox($white, none, 20px, $fontStack, $fontBold, 24px);
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .serviceList {
@@ -134,19 +146,15 @@ h4 {
     margin-bottom: 2rem;
   }
 }
-.gridNumber {
-  @include textBox($lightGreen, row, 40px, $fontStack, $fontBold, 49px);
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2rem;
+.mailFormInput {
+  @include textBox($offWhite, row, 25px, $fontStack, $fontNormal, 30px);
+  background-color: rgba($color: #000000, $alpha: 0);
+  border: $offWhite solid 3px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
 }
+/*Services fonts end*/
 
-.gridText {
-  @include textBox($white, row, 30px, $fontStack, $fontNormal, 36px);
-  margin-top: -2rem;
-  justify-content: center;
-}
 /*workshop fonts*/
 ul {
   @include textBox($white, column, 20px, $fontStack, $fontNormal, 30px);
@@ -324,14 +332,45 @@ header {
   display: flex;
   justify-content: right;
 }
+.intro {
+  width: 60%;
+}
+.contactInfo {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  svg {
+    margin-top: 14px;
+  }
+}
+.sectionGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  .sectionGridItem {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.furtherInfoBox {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  a {
+    text-decoration: none;
+    padding-top: 0.9rem;
+  }
+}
+
 /*common elements end*/
+/*index page start*/
 .indexHeader {
   display: flex;
   flex-direction: row;
 }
-.introSection {
-  width: 60%;
-}
+
 .navigationIndex {
   display: flex;
 }
@@ -344,11 +383,20 @@ header {
   margin-top: -12rem;
 }
 
-.navSection {
+.contactInfoIndex {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  svg {
+    margin-top: 14px;
+  }
+}
+/*index page end*/
+/*services start*/
+.servicesMainNav {
   display: flex;
   flex-direction: row;
 }
-
 .anchorMenu {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -371,35 +419,9 @@ header {
   color: $white;
 }
 
-.servicePicContainer {
-  width: 30%;
-  justify-content: right;
-}
-
-.serviceSections {
+.services {
   margin-top: 10rem;
   width: 80%;
-}
-
-.furtherInfoBox {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  a {
-    text-decoration: none;
-    padding-top: 0.9rem;
-  }
-}
-
-.sectionGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-
-  .sectionGridItem {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
 }
 
 #mailForm {
@@ -412,35 +434,10 @@ header {
   margin-left: 10%;
 }
 
-.mailFormInput {
-  @include textBox($offWhite, row, 25px, $fontStack, $fontNormal, 30px);
-  background-color: rgba($color: #000000, $alpha: 0);
-  border: $offWhite solid 3px;
-  padding: 1rem;
-  margin-bottom: 1.5rem;
-}
-
 .formMsg {
   padding-bottom: 10rem;
 }
-
-.contactInfoHome {
-  width: 60%;
-  display: flex;
-  justify-content: space-between;
-  svg {
-    margin-top: 14px;
-  }
-}
-.contactInfo {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
-  svg {
-    margin-top: 14px;
-  }
-}
+/*services end*/
 /*workshop start*/
 .workshopFlex {
   display: flex;
@@ -567,7 +564,7 @@ hr {
     margin-left: 10%;
   }
 
-  .introSection {
+  .intro {
     margin: 0%;
     width: 100%;
   }
@@ -632,7 +629,7 @@ hr {
   footer {
     display: block;
   }
-  .contactInfoHome {
+  .contactInfoIndex {
     width: 100%;
     svg {
       margin-top: 10px;
@@ -649,7 +646,7 @@ hr {
   /*services mediqquerries start*/
   .anchorMenu,
   .serviceNav,
-  .serviceSections {
+  .services {
     display: none;
   }
   summary {
