@@ -386,7 +386,38 @@ hr {
 .longHr {
   width: 100%;
 }
-
+.quote {
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  font-family: "Verdana";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+  color: #ffffff;
+}
+.quote::before {
+  content: open-quote;
+  font-family: "Times New Roman";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 92px;
+  color: #61812c;
+  display: inline;
+}
+.quote::after {
+  content: close-quote;
+  font-family: "Times New Roman";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 92px;
+  color: #61812c;
+  display: inline;
+}
 /*common elements end*/
 /*index page start*/
 .indexHeader {
@@ -464,49 +495,6 @@ hr {
   width: 100%;
 }
 /*services end*/
-/*workshop start*/
-.quote {
-  width: 70%;
-  margin-right: auto;
-  margin-left: auto;
-  text-align: center;
-  font-family: "Verdana";
-  font-style: italic;
-  font-weight: 400;
-  font-size: 30px;
-  line-height: 36px;
-  color: #ffffff;
-}
-.quote::before {
-  content: open-quote;
-  font-family: "Times New Roman";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 80px;
-  line-height: 92px;
-  color: #61812c;
-  display: inline;
-}
-.quote::after {
-  content: close-quote;
-  font-family: "Times New Roman";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 80px;
-  line-height: 92px;
-  color: #61812c;
-  display: inline;
-}
-span {
-  font-family: "Times New Roman";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 80px;
-  line-height: 92px;
-  color: #61812c;
-}
-
-/*workshop end*/
 /*about us start*/
 
 .previosProjectsFlex {
@@ -521,7 +509,7 @@ span {
 }
 
 /*about us end*/
-/*about us mediqquerries start*/
+/* mediaqquerries hiding mobile content start*/
 @media only screen and (min-width: 1024px) {
   .testimonialMobile,
   details,
@@ -530,6 +518,8 @@ span {
     display: none;
   }
 }
+/*mediaqquerries hiding mobile content end*/
+/*common mobile mediqquerries end start*/
 @media only screen and (max-width: 1023px) {
   body {
     margin-left: 10%;
@@ -538,10 +528,12 @@ span {
   header {
     display: none;
   }
-  .indexHeader {
-    display: flex;
-    flex-direction: row;
+  .navigation {
+    a {
+      font-size: 12px;
+    }
   }
+
   .logo2 {
     img {
       width: 140px;
@@ -554,12 +546,6 @@ span {
       padding-top: 0.9rem;
     }
   }
-  .indexArt {
-    width: 100%;
-    display: block;
-    margin-left: 10%;
-  }
-
   .intro {
     margin: 0%;
     width: 100%;
@@ -567,6 +553,11 @@ span {
 
   .mainFlex {
     display: block;
+  }
+  .sectionGrid {
+    display: flex;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .quote {
@@ -588,6 +579,64 @@ span {
   .multimediaDesktop {
     display: none;
   }
+  .contactInfo {
+    width: 100%;
+    svg {
+      margin-top: 4px;
+    }
+  }
+
+  /*common mobile mediqquerries end*/
+  /* index mobile mediaquerries stort*/
+  .indexHeader {
+    display: flex;
+    flex-direction: row;
+  }
+  .indexArt {
+    width: 100%;
+    display: block;
+    margin-left: 10%;
+  }
+  .navigationIndex {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    .indexNav {
+      padding: 0%;
+      width: 100%;
+    }
+    img {
+      scale: 0.6;
+      justify-content: center;
+      margin-top: 1.3rem;
+    }
+  }
+  .contactInfoIndex {
+    width: 100%;
+    svg {
+      margin-top: 10px;
+    }
+  }
+  /* index mobile mediaquerries end*/
+  /*services mobile mediqquerries start*/
+  .anchorMenu,
+  .serviceNav,
+  .services {
+    display: none;
+  }
+  summary {
+    display: grid;
+    grid-template-columns: 11fr 1fr;
+    justify-content: center;
+    align-items: center;
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  /*services mobile mediqquerries end*/
+  /*workshop mobile mediqquerries start*/
   .testimonialMobile {
     display: flex;
     flex-direction: column;
@@ -596,14 +645,9 @@ span {
       width: 100%;
     }
   }
-  .sectionGrid {
-    display: flex;
-    justify-content: space-between;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
 
-  /*about us mediqquerries end*/
-  /*about us mediaquerries start*/
+  /*workshop mobile mediqquerries end*/
+  /*about us mobile mediaquerries start*/
   .previosProjectsFlex {
     display: block;
   }
@@ -625,60 +669,8 @@ span {
   footer {
     display: block;
   }
-  .contactInfoIndex {
-    width: 100%;
-    svg {
-      margin-top: 10px;
-    }
-  }
-  .contactInfo {
-    width: 100%;
-    svg {
-      margin-top: 4px;
-    }
-  }
 
-  /*about us mediaquerries end*/
-  /*services mediqquerries start*/
-  .anchorMenu,
-  .serviceNav,
-  .services {
-    display: none;
-  }
-  summary {
-    display: grid;
-    grid-template-columns: 11fr 1fr;
-    justify-content: center;
-    align-items: center;
-    svg {
-      width: 40px;
-      height: 40px;
-    }
-  }
-
-  .navigation {
-    a {
-      font-size: 12px;
-    }
-  }
-
-  /*services mediqquerries end*/
-  /*index media querries*/
-
-  .navigationIndex {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-    .indexNav {
-      padding: 0%;
-      width: 100%;
-    }
-    img {
-      scale: 0.6;
-      justify-content: center;
-      margin-top: 1.3rem;
-    }
-  }
+  /*about us mobile mediaquerries end*/
 }
 /*quick fixes for different sizes*/
 @media only screen and (min-width: 320px) and (max-width: 780px) {
