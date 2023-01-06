@@ -12,8 +12,19 @@
 </head>
 
 <body>
-    <label for="navigation">
-        <input type="checkbox" id="navigation" />
+    <header>
+        <div class="navigation">
+            <a href="index.html">Frontpage</a>
+            <a class="active" href="services.html">Services</a>
+            <a href="workshop.html">Workshop</a>
+            <a href="about.html">About us</a>
+        </div>
+        <div class="logo">
+            <a href="index.html"><img src="./pics/logoName.webp" alt="GreenLead logo"></a>
+        </div>
+    </header>
+    <label for="mobileNav">
+        <input type="checkbox" id="mobileNav" />
                 <svg width="39" height="34" viewBox="0 0 39 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="39" height="5.89333" fill="#43591E" />
                   <rect y="14.0532" width="39" height="5.89333" fill="#CFD7BF" />
@@ -36,19 +47,7 @@
                       <a href="about.html">About us</a>
                     </p>
                   </div>
-              
           </label>
-    <header>
-        <div class="navigation">
-            <a href="index.html">Frontpage</a>
-            <a class="active" href="services.html">Services</a>
-            <a href="workshop.html">Workshop</a>
-            <a href="about.html">About us</a>
-        </div>
-        <div class="logo">
-            <a href="index.html"><img src="./pics/logoName.webp" alt="GreenLead logo"></a>
-        </div>
-    </header>
     <section class="intro">
         <h1>OUR EXPERTISES</h1>
         <h2>Does your company have a vision for a green transition, and do you need help to convert that vision into an
@@ -760,6 +759,12 @@
         <input type="text" class="mailFormInput formTele" placeholder="Telephone">
         <input type="text" class="mailFormInput formSubject" placeholder="Subject">
         <input type="text" class="mailFormInput formMsg" placeholder="Enter your message">
+        <button>
+            <button type="checkbox" required id="custom-checkbox">123</button>
+            <label for="custom-checkbox"></label>
+           <p>I agree with </p>
+            <a href="https://mponline.one/greenlead/privacyPolicy.html">Privacy policy terms</a>
+          </div>
         <button type="submit" class="emailBtn">Send</button>
     </form>
     <hr class="longHr"/>

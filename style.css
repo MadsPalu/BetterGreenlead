@@ -740,6 +740,12 @@ hr {
 }
 
 /*about us end*/
+/*gdpr start*/
+p a {
+  color: white;
+}
+
+/*gdpr end*/
 /* mediaqquerries hiding mobile content start*/
 @media only screen and (min-width: 1024px) {
   .testimonialMobile,
@@ -859,6 +865,19 @@ label {
   summary svg {
     width: 40px;
     height: 40px;
+  }
+  #mailForm {
+    width: 100%;
+    margin-top: 5rem;
+    padding-bottom: 2rem;
+    margin-left: 0%;
+  }
+  .checkmark {
+    box-sizing: border-box;
+    width: 25px;
+    height: 5px;
+    border: 1px solid #9ac71b;
+    cursor: pointer;
   }
   /*services mobile mediqquerries end*/
   /*workshop mobile mediqquerries start*/
