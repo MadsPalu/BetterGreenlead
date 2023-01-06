@@ -486,50 +486,36 @@ body {
   margin-right: 8rem;
 }
 
-/*bootstrap*/
-.container-fluid {
-  display: inline-flex;
-  justify-content: space-between;
+/*mobile navigation*/
+label {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  box-sizing: content-box;
+  justify-content: center;
+  align-items: center;
 }
-.container-fluid img {
-  width: 140px;
-}
-
-.navbar-expand-lg {
-  background-color: transparent;
-  padding: 0%;
-}
-
-.navbar-toggler {
-  padding: 0%;
+label a {
+  justify-self: right;
 }
 
-.navbar-toggler-icon {
-  width: 50px;
-  color: #ffffff;
-  padding: 0%;
+input[type=checkbox],
+.mobileNavigation {
+  display: none;
 }
 
-nav ul {
-  padding-bottom: 40px;
+input[type=checkbox]:checked ~ .mobileNavigation {
+  display: grid;
 }
-nav .nav-item {
-  text-decoration: none;
-  padding: 14px;
-  padding-left: 0%;
-}
-nav .nav-item a {
+
+.nav-item a {
   text-decoration: none;
   color: #ffffff;
   font-size: 20px;
 }
 
-.navbar > * {
-  z-index: 0;
-  background-color: #070f00;
-  padding: 0%;
-}
-
+/*mobile navigation end*/
 header {
   display: flex;
   flex-direction: row;
@@ -756,12 +742,19 @@ hr {
 }
 
 /*about us end*/
+/*gdpr start*/
+p a {
+  color: white;
+}
+
+/*gdpr end*/
 /* mediaqquerries hiding mobile content start*/
 @media only screen and (min-width: 1024px) {
   .testimonialMobile,
 details,
 summary,
-.navbar {
+.navbar,
+label {
     display: none;
   }
 }
@@ -774,6 +767,9 @@ summary,
   }
   header {
     display: none;
+  }
+  a img {
+    width: 160px;
   }
   .navigation a {
     font-size: 12px;
@@ -871,6 +867,19 @@ summary,
   summary svg {
     width: 40px;
     height: 40px;
+  }
+  #mailForm {
+    width: 100%;
+    margin-top: 5rem;
+    padding-bottom: 2rem;
+    margin-left: 0%;
+  }
+  .checkmark {
+    box-sizing: border-box;
+    width: 25px;
+    height: 5px;
+    border: 1px solid #9ac71b;
+    cursor: pointer;
   }
   /*services mobile mediqquerries end*/
   /*workshop mobile mediqquerries start*/
