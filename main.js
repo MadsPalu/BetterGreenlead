@@ -21,3 +21,11 @@ const form = document.getElementById("mailForm");
             alert("Something went wrong");
         })
     })
+
+    window.addEventListener("scroll", function() {
+        if (window.scrollY < 400) {
+          document.getElementById("serviceNav").style.display = "none";
+        } else {
+          document.getElementById("serviceNav").style.display = "block";
+        }
+      });

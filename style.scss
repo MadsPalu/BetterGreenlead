@@ -136,7 +136,8 @@ h4 {
 .serviceNav {
   position: fixed;
   right: 0;
-  top: 20rem;
+  margin-right: 1rem;
+  top: 15rem;
   max-width: 30%;
   .anchorText {
     @include textBox($wTonedDown, row, 10px, $fontStack, $fontBold, 12px);
@@ -435,6 +436,7 @@ hr {
   flex: row;
   justify-content: right;
   margin-top: -12rem;
+  margin-left: 15rem;
 }
 
 .contactInfoIndex {
