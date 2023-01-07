@@ -166,9 +166,9 @@ ul {
 /*workshop fonts end*/
 footer {
   @include textBox(#cfd7bf, row, 20px, $fontStack, $fontNormal, 24px);
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  width: 100%;
   p {
     margin: 2px;
   }
@@ -234,6 +234,8 @@ footer {
   .gridNumber {
     @include textBox($lightGreen, row, 18px, $fontStack, $fontBold, 21px);
     padding-bottom: 0px;
+    margin: 7px;
+    justify-content: space-around;
   }
 
   .gridText {
@@ -299,7 +301,7 @@ header {
   padding-bottom: 2rem;
 }
 .navigation {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   a {
@@ -353,16 +355,19 @@ header {
   }
 }
 .mainFlex {
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   width: 100%;
   margin-bottom: 5rem;
+  img {
+    max-width: 600px;
+  }
 }
 .multimediaDesktop {
   display: flex;
   flex-direction: column;
   text-align: center;
-  max-width: 780px;
-  padding: 24px;
+  padding-left: 24px;
   padding-top: 0%;
 }
 hr {
@@ -556,7 +561,9 @@ p {
 
   .mainFlex {
     display: block;
+    margin-bottom: 0rem;
   }
+
   .sectionGrid {
     display: flex;
     justify-content: space-between;
@@ -687,7 +694,13 @@ p {
 
   /*about us mobile mediaquerries end*/
 }
-/*quick fixes for different sizes*/
+/*fixes for specific sizes*/
+@media only screen and (max-width: 500px) {
+  body {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
 @media only screen and (min-width: 320px) and (max-width: 780px) {
   .navigationIndex {
     img {
@@ -700,6 +713,23 @@ p {
     width: 50%;
     margin-top: -4rem;
     height: min-content;
+  }
+  .previosProjectsFlex {
+    display: block;
+  }
+  .gain {
+    display: block;
+    padding: 0%;
+    margin-top: 0rem;
+    width: 700px;
+    margin-inline: auto;
+    .gridNumber {
+      text-align: center;
+    }
+    .gridText {
+      text-align: center;
+      width: 700px;
+    }
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -724,3 +754,22 @@ p {
     display: none;
   }
 }
+/*workshop/services main content size specific media querries start*/
+@media only screen and (min-width: 1023px) and (max-width: 1500px) {
+  .mainFlex {
+    display: block;
+  }
+  .multimediaDesktop {
+    display: flex;
+    align-items: center;
+    padding-top: 5rem;
+    video {
+      width: 80%;
+    }
+    .gridText {
+      max-width: 276px;
+      align-self: center;
+    }
+  }
+}
+/*workshop size specific media querries end*/
