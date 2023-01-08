@@ -23,6 +23,7 @@ $footerFontSize: 20px;
 h1 {
   @include textBox($white, row, 50px, $fontStack, $fontNormal, 60px);
   margin-bottom: 2rem;
+  margin-top: 1rem;
 }
 
 h2 {
@@ -107,6 +108,7 @@ h4 {
   @include textBox($white, row, 30px, $fontStack, $fontNormal, 36px);
   margin-top: -2rem;
   justify-content: center;
+  padding-inline: 10px;
 }
 /*Services fonts start*/
 .anchorNumber {
@@ -136,7 +138,7 @@ h4 {
 .serviceNav {
   position: fixed;
   right: 0;
-  margin-right: 1rem;
+  margin-right: 4rem;
   top: 15rem;
   max-width: 30%;
   .anchorText {
@@ -242,7 +244,9 @@ footer {
   .gridText {
     @include textBox($white, row, 12px, $fontStack, $fontNormal, 14px);
     margin-top: 0rem;
-    width: 100px;
+    width: fit-content;
+    max-width: 160px;
+    padding-inline: 10px;
   }
   footer {
     @include textBox(#cfd7bf, row, 10px, $fontStack, $fontNormal, 12.5px);
@@ -370,6 +374,7 @@ header {
   text-align: center;
   padding-left: 24px;
   padding-top: 0%;
+  margin-top: -50px;
 }
 hr {
   width: 60%;
@@ -429,7 +434,7 @@ hr {
   display: flex;
   flex: row;
   justify-content: right;
-  margin-top: -12rem;
+  margin-top: -16rem;
   margin-left: 15rem;
 }
 
@@ -608,6 +613,7 @@ p {
     width: 100%;
     display: block;
     margin-left: 10%;
+    margin-top: -11rem;
   }
   .navigationIndex {
     display: grid;
@@ -658,6 +664,11 @@ p {
     height: 25px;
     border: 1px solid #9ac71b;
     cursor: pointer;
+  }
+  summary {
+    h3 {
+      margin: 0.5rem;
+    }
   }
   /*services mobile mediqquerries end*/
   /*workshop mobile mediqquerries start*/
@@ -756,7 +767,6 @@ p {
     display: none;
   }
 }
-/*workshop/services main content size specific media querries start*/
 @media only screen and (min-width: 1023px) and (max-width: 1500px) {
   .mainFlex {
     display: block;
@@ -773,5 +783,8 @@ p {
       align-self: center;
     }
   }
+  body {
+    margin-left: 6%;
+    margin-right: 6%;
+  }
 }
-/*workshop size specific media querries end*/
