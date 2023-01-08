@@ -293,9 +293,9 @@ footer {
   font-family: Verdana;
   font-weight: 400;
   line-height: 24px;
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  width: 100%;
 }
 footer p {
   margin: 2px;
@@ -445,6 +445,8 @@ footer svg {
     font-weight: 700;
     line-height: 21px;
     padding-bottom: 0px;
+    margin: 7px;
+    justify-content: space-around;
   }
   .gridText {
     display: flex;
@@ -524,7 +526,7 @@ header {
 }
 
 .navigation {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: row;
 }
@@ -588,17 +590,20 @@ header {
 }
 
 .mainFlex {
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   width: 100%;
   margin-bottom: 5rem;
+}
+.mainFlex img {
+  max-width: 600px;
 }
 
 .multimediaDesktop {
   display: flex;
   flex-direction: column;
   text-align: center;
-  max-width: 780px;
-  padding: 24px;
+  padding-left: 24px;
   padding-top: 0%;
 }
 
@@ -790,6 +795,7 @@ label {
   }
   .mainFlex {
     display: block;
+    margin-bottom: 0rem;
   }
   .sectionGrid {
     display: flex;
@@ -877,7 +883,7 @@ label {
   .checkmark {
     box-sizing: border-box;
     width: 25px;
-    height: 5px;
+    height: 25px;
     border: 1px solid #9ac71b;
     cursor: pointer;
   }
@@ -917,7 +923,13 @@ label {
   }
   /*about us mobile mediaquerries end*/
 }
-/*quick fixes for different sizes*/
+/*fixes for specific sizes*/
+@media only screen and (max-width: 500px) {
+  body {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
 @media only screen and (min-width: 320px) and (max-width: 780px) {
   .navigationIndex img {
     display: none;
@@ -930,6 +942,23 @@ label {
     height: -webkit-min-content;
     height: -moz-min-content;
     height: min-content;
+  }
+  .previosProjectsFlex {
+    display: block;
+  }
+  .gain {
+    display: block;
+    padding: 0%;
+    margin-top: 0rem;
+    width: 700px;
+    margin-inline: auto;
+  }
+  .gain .gridNumber {
+    text-align: center;
+  }
+  .gain .gridText {
+    text-align: center;
+    width: 700px;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -955,4 +984,23 @@ label {
   .indexHrIndex {
     display: none;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+/*workshop/services main content size specific media querries start*/
+@media only screen and (min-width: 1023px) and (max-width: 1500px) {
+  .mainFlex {
+    display: block;
+  }
+  .multimediaDesktop {
+    display: flex;
+    align-items: center;
+    padding-top: 5rem;
+  }
+  .multimediaDesktop video {
+    width: 80%;
+  }
+  .multimediaDesktop .gridText {
+    max-width: 276px;
+    align-self: center;
+  }
+}
+/*workshop size specific media querries end*//*# sourceMappingURL=style.css.map */
