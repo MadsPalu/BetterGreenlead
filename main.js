@@ -10,7 +10,7 @@ const form = document.getElementById("mailForm");
         Email.send({
             Host: "smtp.elasticemail.com",
             Username: "backupmailforbackup@gmail.com",
-            Password: "D5CD25B5E590369C3FA2C4279A8EB49386A9",
+            Password: "",
             To: `${email}`,
             From: "backupmailforbackup@gmail.com",
             Subject: `${subject}`,
@@ -21,7 +21,7 @@ const form = document.getElementById("mailForm");
         Email.send({
           Host: "smtp.elasticemail.com",
           Username: "backupmailforbackup@gmail.com",
-          Password: "D5CD25B5E590369C3FA2C4279A8EB49386A9",
+          Password: "",
           To: `${email}`,
           From: "backupmailforbackup@gmail.com",
           Subject: `${subject}`,
