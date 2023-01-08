@@ -20,12 +20,27 @@ const form = document.getElementById("mailForm");
         }).catch((error) =>{
             alert("Something went wrong");
         })
-    })
+    });
 
-    window.addEventListener("scroll", function() {
+    function scrollcheck() {
+      if (window.innerWidth < 1023) {
+        document.getElementById("serviceNav").style.display = "none";
+      } else {
         if (window.scrollY < 400) {
           document.getElementById("serviceNav").style.display = "none";
         } else {
           document.getElementById("serviceNav").style.display = "block";
         }
-      });
+      }
+    }
+    
+    const mediaQuery = window.matchMedia('(min-width: 1023px)')
+    window.addEventListener('resize', function(){
+      if (mediaQuery.matches) {
+        window.addEventListener("scroll", scrollcheck);
+      }
+      else {
+        this.window.removeEventListener("scroll", scrollcheck);
+        document.getElementById("serviceNav").style.display = "none";
+      }
+    });
