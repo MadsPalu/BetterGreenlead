@@ -10,17 +10,32 @@ const form = document.getElementById("mailForm");
         Email.send({
             Host: "smtp.elasticemail.com",
             Username: "backupmailforbackup@gmail.com",
-            Password: "C7E023D7F0CEC0D7BAB26B35F949C3F3029F",
+            Password: "D5CD25B5E590369C3FA2C4279A8EB49386A9",
             To: `${email}`,
             From: "backupmailforbackup@gmail.com",
             Subject: `${subject}`,
             Body: `Thank you for your mail, we will get to you as soon as possible! <br> Best regards, <br> Greenlead`,
-        }).then((success) => {
-            alert("message sent to your mail!");
         }).catch((error) =>{
             alert("Something went wrong");
         })
+        Email.send({
+          Host: "smtp.elasticemail.com",
+          Username: "backupmailforbackup@gmail.com",
+          Password: "D5CD25B5E590369C3FA2C4279A8EB49386A9",
+          To: `${email}`,
+          From: "backupmailforbackup@gmail.com",
+          Subject: `${subject}`,
+          Body: `${name}
+          <br>${tele}
+          <br>${email}
+          <br><br>${msg}`,
+      }).then((success) => {
+          alert("message sent to your mail!");
+      }).catch((error) =>{
+          alert("Something went wrong");
+      })
     });
+    
 
     function scrollcheck() {
       if (window.innerWidth < 1023) {
