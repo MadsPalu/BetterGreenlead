@@ -7,7 +7,7 @@
     <meta name="description" content="Greenlead services for companies to go with sustainable energy and focus on renewable energy ">
   <meta name="keywords" content="Hydro energy, Thermal energy, Batteries, Green transition, Green energy, Consulting, Utility">
     <link rel="stylesheet" href="style.css">
-   
+    
     <title>Document</title>
 </head>
 
@@ -763,11 +763,13 @@
         <input type="text" class="mailFormInput formTele" placeholder="Telephone">
         <input type="text" class="mailFormInput formSubject" placeholder="Subject">
         <input type="text" class="mailFormInput formMsg" placeholder="Enter your message">
-        <button>
-            <button type="checkbox" required id="custom-checkbox">123</button>
-            <label for="custom-checkbox"></label>
-           <p>I agree with </p>
-            <a href="https://mponline.one/greenlead/privacyPolicy.html">Privacy policy terms</a>
+        
+        <div class="privacyPolicyDiv">
+            <button class="buttonToggle" onclick="toggleGreenSquare()">
+                <div class="green-square"></div>
+              </button>
+            <p class="text">I agree to</p>
+            <a href="privacyPolicy.html">Privacy policy terms</a>
           </div>
         <button type="submit" class="emailBtn">Send</button>
     </form>
@@ -787,8 +789,19 @@
       </svg>
     </a>
     </section>
+    <script>
+        function toggleGreenSquare() {
+          var greenSquare = document.querySelector(".green-square");
+          if (greenSquare.style.display === "none") {
+            greenSquare.style.display = "block";
+          } else {
+            greenSquare.style.display = "none";
+          }
+        }
+      </script>
 </body>
 <script src="https://smtpjs.com/v3/smtp.js">
 </script>
 <script src="main.js"></script>
+
 </html>

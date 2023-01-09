@@ -732,6 +732,33 @@ hr {
   margin-left: 10%;
 }
 
+.checkbox {
+  width: 25px;
+  height: 25px;
+  background: white;
+  border: 2px solid #9ac71b;
+  display: inline-block;
+  position: relative;
+}
+
+.buttonToggle {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.green-square {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  right: 4px;
+  background-color: green;
+  display: none;
+  margin-inline: auto;
+}
+
 .formMsg {
   padding-bottom: 10rem;
 }
@@ -888,13 +915,6 @@ label {
     padding-bottom: 2rem;
     margin-left: 0%;
   }
-  .checkmark {
-    box-sizing: border-box;
-    width: 25px;
-    height: 25px;
-    border: 1px solid #9ac71b;
-    cursor: pointer;
-  }
   summary h3 {
     margin: 0.5rem;
   }
@@ -973,7 +993,8 @@ label {
   }
 }
 @media only screen and (min-width: 1024px) {
-  .indexHrMobile {
+  .indexHrMobile,
+.hrMobile {
     display: none;
   }
   .indexHrDesktop {
@@ -1015,5 +1036,10 @@ label {
   body {
     margin-left: 6%;
     margin-right: 6%;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .team {
+    margin-top: -8rem;
   }
 }/*# sourceMappingURL=style.css.map */
