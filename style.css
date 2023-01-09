@@ -136,6 +136,11 @@ h4 {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  transition: scale 0.3s;
+}
+
+.emailBtn:hover {
+  scale: 1.06;
 }
 
 .gridNumber {
@@ -492,8 +497,33 @@ body {
   background-repeat: no-repeat;
   margin-left: 8rem;
   margin-right: 8rem;
+  transform: translateX(-200%);
+  opacity: 0;
+  -webkit-animation: slide-in-anim 0.7s ease-out forwards;
+          animation: slide-in-anim 0.7s ease-out forwards;
 }
 
+@-webkit-keyframes slide-in-anim {
+  20% {
+    opacity: 0;
+    transform: translateX(-5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-in-anim {
+  20% {
+    opacity: 0;
+    transform: translateX(-5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
 /*mobile navigation*/
 label {
   width: 100%;
@@ -515,6 +545,7 @@ input[type=checkbox],
 
 input[type=checkbox]:checked ~ .mobileNavigation {
   display: grid;
+  height: 100%;
 }
 
 .nav-item a {
@@ -780,6 +811,17 @@ hr {
   display: inline-block;
 }
 
+.actionAnimation {
+  color: white;
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+.actionAnimation:hover {
+  scale: 1.06;
+  transition-duration: 0.3s;
+}
+
 /*about us end*/
 /*gdpr start*/
 p a {
@@ -946,7 +988,8 @@ label {
   .gain > * {
     justify-content: center;
     text-align: center;
-    width: 80%;
+    width: 100%;
+    max-width: 360px;
     margin-inline: auto;
   }
   footer {

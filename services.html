@@ -7,8 +7,8 @@
     <meta name="description" content="Greenlead services for companies to go with sustainable energy and focus on renewable energy ">
   <meta name="keywords" content="Hydro energy, Thermal energy, Batteries, Green transition, Green energy, Consulting, Utility">
     <link rel="stylesheet" href="style.css">
-    
-    <title>Document</title>
+    <title>Services</title>
+    <link rel="shortcut icon" href="/pics/logoPlain.webp" type="image/x-icon" />
 </head>
 
 <body>
@@ -752,9 +752,9 @@
         <div class="furtherInfoBox">
             <p class="furtherInfoText">For further information
                 <br> & arrangement</p>
-            <a href="#mailForm" class="emailBtn">
+            <button href="#mailForm" class="emailBtn">
                 Send Mail
-            </a>
+            </button>
         </div>
     </nav>
     <form id="mailForm">
@@ -764,15 +764,17 @@
         <input type="text" class="mailFormInput formSubject" placeholder="Subject">
         <input type="text" class="mailFormInput formMsg" placeholder="Enter your message">
         
-        <div class="privacyPolicyDiv">
-            <button class="buttonToggle" onclick="toggleGreenSquare()">
-                <div class="green-square"></div>
-              </button>
-            <p class="text">I agree to</p>
-            <a href="privacyPolicy.html">Privacy policy terms</a>
-          </div>
+        
         <button type="submit" class="emailBtn">Send</button>
     </form>
+    <div class="privacyPolicyDiv">
+        <button class="buttonToggle" onclick="toggleGreenSquare()">
+            <div class="green-square"></div>
+          </button>
+        <p class="text">I agree to
+        <a href="privacyPolicy.html">Privacy policy terms</a>
+    </p>
+      </div>
     <hr class="longHr"/>
     <section class="contactInfo">
       <div class="info">
@@ -789,16 +791,7 @@
       </svg>
     </a>
     </section>
-    <script>
-        function toggleGreenSquare() {
-          var greenSquare = document.querySelector(".green-square");
-          if (greenSquare.style.display === "none") {
-            greenSquare.style.display = "block";
-          } else {
-            greenSquare.style.display = "none";
-          }
-        }
-      </script>
+  
 </body>
 <script src="https://smtpjs.com/v3/smtp.js">
 </script>

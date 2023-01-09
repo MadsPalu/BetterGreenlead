@@ -59,4 +59,11 @@ window.addEventListener("resize", function () {
     document.getElementById("serviceNav").style.display = "none";
   }
 });
-
+function toggleGreenSquare() {
+  var greenSquare = document.querySelector(".green-square");
+  if (greenSquare.style.display === "none") {
+    greenSquare.style.display = "block";
+  } else {
+    greenSquare.style.display = "none";
+  }
+}
