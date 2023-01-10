@@ -46,6 +46,7 @@
                     <p class="nav-item">
                       <a href="about.html">About us</a>
                     </p>
+                    <div><hr class="hrMobile" style="position: absolute;"></div>
                   </div>
           </label>
     <section class="intro">
@@ -758,23 +759,26 @@
         </div>
     </nav>
     <form id="mailForm">
-        <input type="text" class="mailFormInput formName" placeholder="Name">
-        <input type="text" class="mailFormInput formEmail" placeholder="E-mail">
+        <input type="text" class="mailFormInput formName" placeholder="Name*"  required>
+        <input type="text" class="mailFormInput formEmail" placeholder="E-mail*" required>
         <input type="text" class="mailFormInput formTele" placeholder="Telephone">
         <input type="text" class="mailFormInput formSubject" placeholder="Subject">
-        <input type="text" class="mailFormInput formMsg" placeholder="Enter your message">
-        
-        
+        <input type="text" class="mailFormInput formMsg" placeholder="Enter your message*" required>
+        <div class="privacyPolicyDiv">
+            <button type="button" class="buttonToggle" onclick="toggleGreenSquare()">
+                <div class="green-square"></div>
+              </button>
+            <p class="text">I agree to
+            <a href="privacyPolicy.html">Privacy policy terms</a>
+        </p>
+          </div>
         <button type="submit" class="emailBtn">Send</button>
+  
+            
+           
+        
     </form>
-    <div class="privacyPolicyDiv">
-        <button class="buttonToggle" onclick="toggleGreenSquare()">
-            <div class="green-square"></div>
-          </button>
-        <p class="text">I agree to
-        <a href="privacyPolicy.html">Privacy policy terms</a>
-    </p>
-      </div>
+    
     <hr class="longHr"/>
     <section class="contactInfo">
       <div class="info">

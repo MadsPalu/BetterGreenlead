@@ -187,6 +187,14 @@ footer {
 /*fonts desktop end*/
 /*mobile fonts start*/
 @media only screen and (max-width: 1023px) {
+  .nav-item {
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 20px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+  }
   h1 {
     @include textBox($white, row, 25px, $fontStack, $fontNormal, 30px);
   }
@@ -313,13 +321,6 @@ input[type="checkbox"]:checked ~ .mobileNavigation {
   height: 100%;
 }
 
-.nav-item {
-  a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 20px;
-  }
-}
 /*mobile navigation end*/
 header {
   display: flex;
@@ -510,19 +511,11 @@ hr {
   padding-bottom: 2rem;
   margin-left: 10%;
 }
-.checkbox {
-  width: 25px;
-  height: 25px;
-  background: white;
-  border: 2px solid #9ac71b;
-  display: inline-block;
-  position: relative;
-}
 .buttonToggle {
-  width: 20px;
-  height: 20px;
+  width: 21px;
+  height: 19px;
   position: relative;
-  border: 1px solid black;
+  border: 1px solid #9ac71b;
   cursor: pointer;
 }
 
@@ -531,9 +524,8 @@ hr {
   height: 15px;
   position: relative;
   right: 4px;
-  background-color: green;
+  background-color: #9ac71b;
   display: none;
-  margin-inline: auto;
 }
 .formMsg {
   padding-bottom: 10rem;
@@ -619,6 +611,7 @@ p {
   .intro {
     margin: 0%;
     width: 100%;
+    padding-top: 2rem;
   }
 
   .mainFlex {

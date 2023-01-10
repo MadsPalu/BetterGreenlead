@@ -61,8 +61,13 @@ window.addEventListener("resize", function () {
 });
 function toggleGreenSquare() {
   var greenSquare = document.querySelector(".green-square");
+  if (greenSquare.style.display === "") {
+    greenSquare.style.display = "none";
+  }
   if (greenSquare.style.display === "none") {
     greenSquare.style.display = "block";
+    greenSquare.style.marginTop = "0px";
+    greenSquare.style.marginInline = "auto";
   } else {
     greenSquare.style.display = "none";
   }
